@@ -10,7 +10,9 @@ public class MessageBuilder {
         StringBuilder result = new StringBuilder();
         if ("".equals(name)||null==name) {
             result.append(PROVIDED);
-        } else {
+        } else if(HELLO.equals(name)){
+            result.append("This is a hello!");
+        }else {
             result.append(HELLO).append(name);
         }
         return result.toString();
