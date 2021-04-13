@@ -2,17 +2,21 @@ package com.mia.tjacoco;
 
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class MessageBuilderTest {
 
-//    @Before
-//    public void setUp() throws Exception {
-//    }
-//
-//    @After
-//    public void tearDown() throws Exception {
-//    }
+    @BeforeClass
+    public void setUp() throws Exception {
+        System.out.println("开始class之前");
+    }
+
+    @AfterClass
+    public void tearDown() throws Exception {
+        System.out.println("结束class之后");
+    }
 
     @Test
     public void testNameMessage() {
